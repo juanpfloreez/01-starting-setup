@@ -1,4 +1,5 @@
 import Expenses from "./components/Expenses";
+import Titles from "./components/Titles";
 
 function App() {
   
@@ -31,7 +32,7 @@ function App() {
 
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <Titles></Titles>
       <Expenses expenses={expenses}></Expenses>
     </div>
   );
