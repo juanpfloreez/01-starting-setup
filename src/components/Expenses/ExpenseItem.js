@@ -8,6 +8,7 @@ import './ExpenseItem.css';
 const ExpenseItem = (props) => {
    
     const [title, setTitle] = useState(props.title);
+    //every use.. is a react hook
 
     const ClickHandler = () => {
         //handler word used when function is atached to an event
