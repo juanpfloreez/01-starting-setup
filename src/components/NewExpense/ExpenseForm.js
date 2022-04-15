@@ -2,7 +2,7 @@ import React, { useState} from 'react';
 
 import './ExpenseForm.css';
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
     //it is totally normal and you can use as many states-useState you need
     //I am using here ArrayDeconstructuring, [first value, second value that I get after the
     //function gets executed]
@@ -47,7 +47,8 @@ const ExpenseForm = () => {
     };
 
     const submitHandler = (event) => {
-        
+        //functions that executes when user submit the form
+
         //this is to avoid the page to reload when pressing the buttom, so I am gonna handle the 
         //submision with javasctipt object
         event.preventDefault();
@@ -58,7 +59,8 @@ const ExpenseForm = () => {
             amount: enteredAmount,
             date: new Date(enteredDate)
         };
-        console.log (expenseData);
+        //this is to move data (form data) from child component to parent
+        props.onSaveExpenseData(expenseData);
 
         setEnteredTitle('');
         setEnteredDate('');
