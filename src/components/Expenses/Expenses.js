@@ -6,7 +6,11 @@ import './Expenses.css';
 
 const Expenses = (props) => {
 
+    //this is a stateful component
+
+    //this state manages the selected year filter state
     const [filteredYear, setFilteredYear] = useState('2022');
+    //every use... is a react hook
 
     //function when something happens, like whenever a new value(year) is selected, and then assings the
     //value to the state 
