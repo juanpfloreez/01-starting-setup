@@ -1,8 +1,9 @@
 import React, { useState} from 'react';
-import ExpenseItem from './ExpenseItem';
+
 import ExpensesFilter from './ExpensesFilter';
 import Card from '../UI/Card';
 import './Expenses.css';
+import ExpensesList from './ExpensesList';
 
 const Expenses = (props) => {
 
@@ -26,28 +27,12 @@ const Expenses = (props) => {
         // see if the result is equal to the filteredYear (selected on the filter)
         // so only item that does match the filtered year will be kept in the new filter expeneses array
     });
-
+    
     return (
-        //this componenet receives data from app.js and then calls the expenseItem.js component
-        //4 times and extract the value from the array on app.js to render every ExpenseItem
-        <div>
-            
+        <div>   
         <Card className="expenses">
             <ExpensesFilter selected={filteredYear} onSelectedYear={filterChangeHandler}/>
-            {filteredExpenses.map((expense) => (
-                <ExpenseItem
-                    key={expense.id} 
-                    title={expense.title} 
-                    amount={expense.amount} 
-                    date={expense.date}
-                    />
-            ))}
-            {/*
-            here I use the filteredExpenses variable to take the filtered expenses based
-            on the selectedyear, and use the map expression to transform the array to an array full
-            of jsx items and the ExpenseItem components is now being rendered dynamically
-            based on the actual array number of objects on app.js
-            */}
+            <ExpensesList items={filteredExpenses}/>
         </Card>
         </div>   
     );
