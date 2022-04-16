@@ -3,13 +3,13 @@ import Expenses from './components/Expenses/Expenses';
 
 import NewExpense from './components/NewExpense/NewExpense';
 
-//array wich holds all the expenses data, hardcoded by now
+//array wich holds dummy data
 const DUMMY_EXPENSES = [
   {
     id: 'e1',
     title: 'Toilet Paper',
     amount: 94.12,
-    date: new Date(2022, 4, 4),
+    date: new Date(2024, 4, 4),
   },
   {
     id: 'e2',

@@ -18,6 +18,15 @@ const Expenses = (props) => {
        setFilteredYear(selectedYear);
     };
 
+    //I will crete a new variable that takes the props.items from app.js and create a 
+    //new array but with the filtered data I want, and also to avoid losing or deleting data
+    const filteredExpenses = props.items.filter(expense => {
+        return expense.date.getFullYear().toString() === filteredYear;
+        //here I get the expense date, use the getFullYear and transform it to sting and then
+        // see if the result is equal to the filteredYear (selected on the filter)
+        // so only item that does match the filtered year will be kept in the new filter expeneses array
+    });
+
     return (
         //this componenet receives data from app.js and then calls the expenseItem.js component
         //4 times and extract the value from the array on app.js to render every ExpenseItem
@@ -25,13 +34,7 @@ const Expenses = (props) => {
             
         <Card className="expenses">
             <ExpensesFilter selected={filteredYear} onSelectedYear={filterChangeHandler}/>
-
-            {/*
-            here I use the map expression to transform the array from app.js to an array full
-            of jsx items and the ExpenseItem components is now being rendered dynamically
-            based on the actual array number of objects on app.js
-            */}
-            {props.items.map((expense) => (
+            {filteredExpenses.map((expense) => (
                 <ExpenseItem
                     key={expense.id} 
                     title={expense.title} 
@@ -39,6 +42,12 @@ const Expenses = (props) => {
                     date={expense.date}
                     />
             ))}
+            {/*
+            here I use the filteredExpenses variable to take the filtered expenses based
+            on the selectedyear, and use the map expression to transform the array to an array full
+            of jsx items and the ExpenseItem components is now being rendered dynamically
+            based on the actual array number of objects on app.js
+            */}
         </Card>
         </div>   
     );
