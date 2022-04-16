@@ -4,6 +4,8 @@ import './Expenses.css';
 
 const Expenses = (props) => {
     return (
+        //this componenet receives data from app.js and then calls the expenseItem.js component
+        //4 times and extract the value from the array on app.js to render every ExpenseItem
         <Card className="expenses">
             <ExpenseItem
                 title={props.expenses[0].title}

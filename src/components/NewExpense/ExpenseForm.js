@@ -3,6 +3,11 @@ import React, { useState} from 'react';
 import './ExpenseForm.css';
 
 const ExpenseForm = (props) => {
+
+    //this component is to get all the data needed for the project, from a html form, then to pass it to
+    //another component 
+
+
     //it is totally normal and you can use as many states-useState you need
     //I am using here ArrayDeconstructuring, [first value, second value that I get after the
     //function gets executed]
@@ -59,7 +64,7 @@ const ExpenseForm = (props) => {
             amount: enteredAmount,
             date: new Date(enteredDate)
         };
-        //this is to move data (form data) from child component to parent
+        //this is to move data (<form/> data) from child component to parent
         props.onSaveExpenseData(expenseData);
 
         setEnteredTitle('');

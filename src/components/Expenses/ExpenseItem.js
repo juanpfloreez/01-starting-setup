@@ -7,6 +7,9 @@ import './ExpenseItem.css';
 
 const ExpenseItem = (props) => {
    
+    //this component is used to get and return into jsx all the expenseitem descriptions
+    //like date from the component, and title and item price from props
+
     const [title, setTitle] = useState(props.title);
     //every use.. is a react hook
 

@@ -3,6 +3,7 @@ import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
 
 const App = () => {
+  //array wich holds all the expenses data, hardcoded by now
   const expenses = [
     {
       id: 'e1',
