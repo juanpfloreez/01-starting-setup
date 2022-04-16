@@ -67,6 +67,7 @@ const ExpenseForm = (props) => {
         //this is to move data (<form/> data) from child component to parent -> NewExpense.js
         props.onSaveExpenseData(expenseData);
 
+        //Then I set the states with empty data for the form to get clear after submitting
         setEnteredTitle('');
         setEnteredDate('');
         setEnteredAmount('');
