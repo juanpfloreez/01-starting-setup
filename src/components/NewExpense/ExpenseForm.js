@@ -64,7 +64,7 @@ const ExpenseForm = (props) => {
             amount: enteredAmount,
             date: new Date(enteredDate)
         };
-        //this is to move data (<form/> data) from child component to parent
+        //this is to move data (<form/> data) from child component to parent -> NewExpense.js
         props.onSaveExpenseData(expenseData);
 
         setEnteredTitle('');
