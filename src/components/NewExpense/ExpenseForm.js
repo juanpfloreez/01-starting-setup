@@ -61,7 +61,7 @@ const ExpenseForm = (props) => {
         //now I create an object wich holds all the entered state 
         const expenseData = {
             title: enteredTitle,
-            amount: enteredAmount,
+            amount: +enteredAmount,
             date: new Date(enteredDate)
         };
         //this is to move data (<form/> data) from child component to parent -> NewExpense.js

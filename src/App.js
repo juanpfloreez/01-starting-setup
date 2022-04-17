@@ -7,27 +7,27 @@ import NewExpense from './components/NewExpense/NewExpense';
 const DUMMY_EXPENSES = [
   {
     id: 'e1',
-    title: 'Toilet Paper',
+    title: 'Porsche 911 Carrera S',
     amount: 94.12,
-    date: new Date(2024, 4, 4),
+    date: new Date(2022, 9, 23),
   },
   {
     id: 'e2',
-    title: 'New TV',
+    title: 'Palo Alto House',
     amount: 799.49,
     date: new Date(2022, 4, 5),
   },
   {
     id: 'e3',
-    title: 'Car Insurance',
+    title: 'Ferrari 488 Italia',
     amount: 294.67,
-    date: new Date(2022, 4, 6),
+    date: new Date(2022, 11, 6),
   },
   {
     id: 'e4',
-    title: 'New Desk (Wooden)',
+    title: 'Black Private Jet',
     amount: 450,
-    date: new Date(2022,4,7),
+    date: new Date(2023,8,7),
   },
 ];
 
